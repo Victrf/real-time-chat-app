@@ -1,0 +1,91 @@
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(44, 62, 80, 0.2), rgba(76, 161, 175, 0.2)),
+        url('alexander-shatov-_qsuER9xYOY-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+#messages div {
+    margin-bottom: 10px;
+}
+
+body.light-mode {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+
+body.light-mode .card {
+    background-color: #fff !important;
+    color: #212529 !important;
+}
+
+body.light-mode .btn-outline-light {
+    border-color: #212529;
+    color: #212529;
+}
+
+body.light-mode .btn-outline-light:hover {
+    background-color: #212529;
+    color: #fff;
+}
+
+
+/* #loginWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+
+#themeToggleWrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    /* ensure it stays on top */
+}
+
+
+
+/* #chatWrapper {
+   
+    justify-content: center;
+
+    
+} */
+
+
+
+/*  */
+#messages {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('eyestetix-studio-Gj3OsJseh9c-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 300px;
+    overflow-y: auto;
+}
+/* NEW FIX: Apply background & overlay via a pseudo-element that scrolls with content */
+#messages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure child elements (messages) appear above the overlay */
+#messages>* {
+    position: relative;
+    z-index: 1;
+}
