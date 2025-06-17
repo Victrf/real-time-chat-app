@@ -37,3 +37,21 @@ needs more improvement  in its functionalities
 ```bash
 git clone https://github.com/Victrf/realtime-chat-app.git
 cd realtime-chat-app
+
+Suggested Improvements
+Here’s how you (or contributors) can level this up:
+
+🔐 Add authentication (JWT / OAuth / Social logins)
+
+💾 Save chat history to MongoDB or PostgreSQL
+
+📲 Make it mobile-first or wrap in React Native
+
+📤 File & image sharing in chat
+
+🔔 Desktop/browser notifications
+
+🎨 Theme toggle (dark/light)
+
+🌍 Internationalization (multi-language)
+
